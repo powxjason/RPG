@@ -5,7 +5,9 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour {
 
     GameObject Player;
-    Vector2 playerLocation;
+
+    public Vector2 Modifyer;
+
 
     public bool IsVertical;
     public bool IsHorizontal;
@@ -19,24 +21,22 @@ public class FollowPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        playerLocation = new Vector3(Player.GetComponent<Transform>().transform.position.x, Player.GetComponent<Transform>().transform.position.y, GetComponent<Transform>().transform.position.z);
-
+       
         if (IsHorizontal == true & IsVertical == true)
         {
 
-            GetComponent<Transform>().transform.position = playerLocation;
-
+            GetComponent<Transform>().transform.position = new Vector3(Player.GetComponent<Transform>().transform.position.x + Modifyer.x, Player.GetComponent<Transform>().transform.position.y + Modifyer.y, GetComponent<Transform>().transform.position.z);
         }
         else if (IsVertical == true)
         {
 
-            GetComponent<Transform>().transform.position = new Vector3(GetComponent<Transform>().transform.position.x, Player.GetComponent<Transform>().transform.position.y, GetComponent<Transform>().transform.position.z);
+            GetComponent<Transform>().transform.position = new Vector3(GetComponent<Transform>().transform.position.x, Player.GetComponent<Transform>().transform.position.y + Modifyer.y, GetComponent<Transform>().transform.position.z);
 
         }
         else if (IsHorizontal == true)
         {
 
-            GetComponent<Transform>().transform.position = new Vector3(Player.GetComponent<Transform>().transform.position.x, GetComponent<Transform>().transform.position.y, GetComponent<Transform>().transform.position.z);
+            GetComponent<Transform>().transform.position = new Vector3(Player.GetComponent<Transform>().transform.position.x + Modifyer.x, GetComponent<Transform>().transform.position.y, GetComponent<Transform>().transform.position.z);
 
         }
 
