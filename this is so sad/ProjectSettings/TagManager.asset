@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Xcamera
   - Ycamera
+  - Fade
+  - FootSteps
   layers:
   - Default
   - TransparentFX

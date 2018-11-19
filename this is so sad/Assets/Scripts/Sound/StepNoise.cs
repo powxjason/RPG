@@ -8,6 +8,8 @@ public class StepNoise : MonoBehaviour {
     float Y;
     float timer;
     public float StepTime = 0.5f;
+    
+    bool Shutup = false;
     // Use this for initialization
     void Start () {
 		
@@ -19,7 +21,7 @@ public class StepNoise : MonoBehaviour {
         Y = Input.GetAxisRaw("Vertical");
 
 
-        if(X != 0 || Y != 0)
+        if((X != 0 || Y != 0)& Shutup == false)
         {
         timer += Time.deltaTime;
             if (timer >= StepTime)
