@@ -35,7 +35,7 @@ public class Fade : MonoBehaviour {
                 
             }
         }
-        Debug.Log(GetComponent<SpriteRenderer>().color.a);
+        
     }
 
 

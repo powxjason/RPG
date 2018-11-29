@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114273404464377978}
   - component: {fileID: 95300763852124124}
   - component: {fileID: 61400997464935928}
+  - component: {fileID: 114899709895730144}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -57,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1479053844781372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0679647, y: 0.3145667, z: -0.01577126}
+  m_LocalPosition: {x: 0.07, y: 0.23, z: -0.01577126}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.3352667}
   m_Children: []
   m_Father: {fileID: 4293645387643220}
@@ -70,8 +71,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1500266157036258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.9525, y: 24.846287, z: -0.030109107}
-  m_LocalScale: {x: 2, y: 2, z: 2.9827}
+  m_LocalPosition: {x: 14.8746195, y: -1.0483265, z: -0.030109107}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 2.9827}
   m_Children:
   - {fileID: 4274767233006760}
   m_Father: {fileID: 0}
@@ -128,10 +129,10 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1479053844781372}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5486b1f1f740a6f41b34117cae6539fc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ff000674cf361b046b48cd703a2c7a32, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
@@ -246,13 +247,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1826dd2ccaa82fc4798df891ba531712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LockMovement: 0
 --- !u!114 &114365007825335094
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1479053844781372}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6a9b9507540c4b4db0ccf9bb77d9788, type: 3}
   m_Name: 
@@ -269,8 +271,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea99b462c060e014a924c1a60933091f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalSpeed: 5
-  VerticalSpeed: 3
+  HorizontalSpeed: 3
+  VerticalSpeed: 2
+  LockMovement: 0
+--- !u!114 &114899709895730144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1500266157036258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcdb103b9307e4d4fbf16b53c6fede46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI_Text: {fileID: 0}
+  UIElement: {fileID: 0}
+  SentText: 
+  TimeBetweenCharacters: 0.2
+  Writing: 0
+  CurrentCharacter: 0
+  Timer: 0
 --- !u!212 &212274579887478984
 SpriteRenderer:
   m_ObjectHideFlags: 1

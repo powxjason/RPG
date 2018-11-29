@@ -10,13 +10,9 @@ public class PlayerWarp : MonoBehaviour {
     public GameObject Player;
     GameObject Camera;
   
-
     bool Check;
 
     GameObject Fade;
-
-    Vector3 PlayerPointerSpot;
-    Vector3 CameraPointerSpot;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +20,6 @@ public class PlayerWarp : MonoBehaviour {
 
        // Player = GameObject.FindGameObjectWithTag("Player");
         Camera = GameObject.FindGameObjectWithTag("MainCamera");
-       
 
     }
 
